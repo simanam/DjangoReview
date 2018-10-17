@@ -1,0 +1,34 @@
+django Notes
+https://github.com/hiteshchoudhary/DjangoExercise1
+
+
+url.py: is the first file that is hit when user make request to your app
+
+to create new app within projetc:
+navigate into projetc
+run: python manage.py startapp APPNAME
+
+files within app created:
+admin.py: there is built-in admin app that used for admin roles 
+apps.py: it is the configuartion file for app itself, configuring classes
+models.py: we will configuration for database. django automaticlay translates the written code into tabels and stuff 
+test.py: usaually used for unit testing, 
+views.py: handles request and response logic for web application 
+
+
+Whenever we create new appp we have to tell our base project that app has been created 
+
+going to views: what should happen when user made request is made, you define that in views.py 
+
+importing HttpResponse for http requests 
+
+
+steps:
+1 creating an app\
+2 goes in views make sure there is something server
+3 then go urls and make sure you have path 
+4 then go to project urls and make sure there is the path present for your app 
+
+
+
+
