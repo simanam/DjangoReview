@@ -1,0 +1,38 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aman Articles can be found here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/basestyles.css' %}" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1><a href="/">My Personal blog</a></h1>
+    </header>
+
+    <div class="container">
+
+        {% if user.is_authenticated %}
+
+        <p>You are logged in</p>
+        <p>Hey there: {{user.username}}, Whatsup</p>
+        <a href="{% url 'logout' %}">Logout</a>
+
+        {% else %}
+        <p>You are not logged in</p>
+        <p>Please <a href="{% url 'login' %}">Login</a></p>
+        {% endif%}
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+    
+</body>
+</html>
